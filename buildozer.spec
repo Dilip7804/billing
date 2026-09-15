@@ -6,43 +6,49 @@ title = DS World Billing
 # (str) Package name
 package.name = dsworldbilling
 
-# (str) Package domain (needed for android packaging)
+# (str) Package domain (needed for android/ios packaging)
 package.domain = org.dsworld
 
-# (str) Source directory where the application lives
+# (str) Source code where the main.py live
 source.dir = .
 
-# (str) Application versioning (method 1)
-version = 0.1
-
-# (list) Source files to include (let it empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+# (list) Source files to include (let it empty to include all files)
+source.exts = py,png,jpg,kv,atlas,db,csv
 
 # (list) Application requirements
-# Note: Humne yahan pillow ko hata diya hai taaki compile error na aaye
-requirements = python3,kivy
+# (Make sure sqlite3 aur python packages yahan hain)
+requirements = python3,kivy,kivymd,sqlite3,pillow
 
 # (str) Supported orientations
 orientation = portrait
 
-# (list) Permissions
-android.permissions = INTERNET
+# (list) List of services to declare
+#services = 
 
-# (int) Target Android API
+#
+# Android specific
+#
+
+# (bool) Indicate if the application should be fullscreen or not
+fullscreen = 0
+
+# (list) Permissions
+android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
+
+# (int) Target Android API, should be as high as possible.
 android.api = 33
 
-# (int) Minimum API your APK will support
+# (int) Minimum API your APK will support.
 android.minapi = 21
 
 # (str) Android SDK version to use
-android.sdk = 33
+# android.sdk_version = 33
 
 # (str) Android NDK version to use
-android.ndk = 25b
+android.ndk_version = 25b
 
-# (bool) Automatically accept android licenses
-android.accept_sdk_license = True
+# (str) The Android arch to build for: arm64-v8a, armeabi-v7a, x86, x64
+android.archs = armeabi-v7a
 
-[buildozer]
+# (int) Log level (0 = error, 1 = info, 2 = debug (with command output))
 log_level = 2
-warn_on_root = 1
