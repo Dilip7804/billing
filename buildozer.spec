@@ -19,7 +19,8 @@ version = 0.1
 source.include_exts = py,png,jpg,kv,atlas
 
 # (list) Application requirements
-requirements = python3,kivy,pillow
+# Note: Humne yahan pillow ko hata diya hai taaki compile error na aaye
+requirements = python3,kivy
 
 # (str) Supported orientations
 orientation = portrait
@@ -27,10 +28,10 @@ orientation = portrait
 # (list) Permissions
 android.permissions = INTERNET
 
-# (int) Target Android API, should be as high as possible.
+# (int) Target Android API
 android.api = 33
 
-# (int) Minimum API your APK will support.
+# (int) Minimum API your APK will support
 android.minapi = 21
 
 # (str) Android SDK version to use
