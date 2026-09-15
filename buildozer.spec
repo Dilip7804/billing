@@ -3,6 +3,9 @@
 # (str) Title of your application
 title = DS World Billing
 
+# (str) Version of your application
+version = 1.0
+
 # (str) Package name
 package.name = dsworldbilling
 
@@ -16,7 +19,6 @@ source.dir = .
 source.exts = py,png,jpg,kv,atlas,db,csv
 
 # (list) Application requirements
-# (Make sure sqlite3 aur python packages yahan hain)
 requirements = python3,kivy,kivymd,sqlite3,pillow
 
 # (str) Supported orientations
@@ -40,9 +42,6 @@ android.api = 33
 
 # (int) Minimum API your APK will support.
 android.minapi = 21
-
-# (str) Android SDK version to use
-# android.sdk_version = 33
 
 # (str) Android NDK version to use
 android.ndk_version = 25b
