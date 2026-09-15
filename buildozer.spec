@@ -9,11 +9,16 @@ package.name = dsworldbilling
 # (str) Package domain (needed for android packaging)
 package.domain = org.dsworld
 
+# (str) Source directory where the application lives
+source.dir = .
+
+# (str) Application versioning (method 1)
+version = 0.1
+
 # (list) Source files to include (let it empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas
 
 # (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
 requirements = python3,kivy,pillow
 
 # (str) Supported orientations
