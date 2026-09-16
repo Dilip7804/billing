@@ -18,12 +18,10 @@ jobs:
 
       - name: Install System Dependencies
         run: |
-          sudo dpkg --add-architecture i386
           sudo apt-get update
           sudo apt-get install -y \
             git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config \
-            zlib1g-dev libncurses5-dev libncursesw5-dev libncurses5:i386 libstdc++6:i386 \
-            libffi-dev libssl-dev cmake ccache make
+            zlib1g-dev libncurses5-dev libncursesw5-dev libffi-dev libssl-dev cmake ccache make
 
       - name: Install Buildozer & Cython
         run: |
